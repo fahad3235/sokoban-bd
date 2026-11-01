@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sokoban BD — Push-Box Puzzle</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="top">
+    <div>
+      <h1 id="title">Sokoban BD</h1>
+      <p id="tagline" class="tagline"></p>
+    </div>
+    <button id="langBtn" class="lang-btn" type="button">বাংলা</button>
+  </header>
+
+  <section class="stats" aria-label="stats">
+    <div class="stat-main"><span id="levelName"></span></div>
+    <div class="stat"><span id="movesLabel"></span>: <strong id="movesNum">0</strong></div>
+    <div class="stat"><span id="pushesLabel"></span>: <strong id="pushesNum">0</strong></div>
+    <div class="stat"><span id="bestLabel"></span>: <strong id="bestNum">—</strong></div>
+  </section>
+
+  <div id="winBanner" class="win" style="display:none">
+    <strong id="winTitle"></strong>
+    <p id="winSub"></p>
+    <button id="winNext" type="button"></button>
+  </div>
+
+  <div id="board" class="board" role="img" aria-label="Sokoban board"></div>
+
+  <section class="controls">
+    <button id="undoBtn" type="button"></button>
+    <button id="resetBtn" type="button"></button>
+    <button id="prevBtn" type="button"></button>
+    <button id="nextBtn" type="button"></button>
+  </section>
+
+  <section class="dpad" aria-label="direction pad">
+    <span></span><button data-dir="up" type="button" aria-label="up">▲</button><span></span>
+    <button data-dir="left" type="button" aria-label="left">◀</button>
+    <button data-dir="down" type="button" aria-label="down">▼</button>
+    <button data-dir="right" type="button" aria-label="right">▶</button>
+  </section>
+
+  <section class="levels">
+    <h2 id="levelsLabel"></h2>
+    <p id="progressText" class="progress"></p>
+    <div id="levelGrid" class="level-grid"></div>
+  </section>
+
+  <section class="how">
+    <h2 id="howTitle"></h2>
+    <ul>
+      <li id="how1"></li>
+      <li id="how2"></li>
+      <li id="how3"></li>
+      <li id="how4"></li>
+    </ul>
+  </section>
+
+  <footer id="footer"></footer>
+</main>
+<script src="js/logic.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
